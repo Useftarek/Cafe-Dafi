@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-content">
         <!-- Right Group: Logo (Appears on Far Right in RTL) -->
         <div class="right-group">
@@ -9,7 +9,7 @@
           </router-link>
         </div>
 
-        <!-- Center Group: Navigation Links -->
+        <!-- Navigation Links -->
         <div class="navbar-nav" :class="{ 'active': isMenuOpen }">
           <router-link to="/" class="nav-link">الرئيسية</router-link>
           <router-link to="/menu" class="nav-link">المنيو</router-link>
@@ -130,6 +130,19 @@ export default {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.right-group, .left-group {
+  flex: 1;
+  display: flex;
+}
+
+.right-group {
+  justify-content: flex-start;
+}
+
+.left-group {
+  justify-content: flex-end;
 }
 
 .navbar-brand {
